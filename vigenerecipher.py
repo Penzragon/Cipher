@@ -65,7 +65,7 @@ while True:
         print(
             f"Coded message: {vigenere_coder(message.lower(), keyword.lower())}")
     elif menu == 3:
-        print(3)
+        print("Exiting Program. . .")
         break
     else:
         print("Wrong Input!")
