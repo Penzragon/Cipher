@@ -40,8 +40,32 @@ def vigenere_coder(message, keyword):
     return coded
 
 
-message = "rifky aliffa"
-keyword = "penzragon"
-
-print(vigenere(vigenere_coder(message, keyword), keyword))
-print(vigenere_coder(message, keyword))
+while True:
+    print(
+        """
+        1. Decode A Message
+        2. Code A Message
+        3. Exit
+        """
+    )
+    menu = input(": ")
+    try:
+        menu.strip()
+        menu = int(menu)
+    except:
+        menu = input(": ")
+    if menu == 1:
+        message = input("Input your message: ")
+        keyword = input("input your keyword: ")
+        print(
+            f"Decoded message: {vigenere(message.lower(), keyword.lower())}")
+    elif menu == 2:
+        message = input("Input your message: ")
+        keyword = input("input your keyword: ")
+        print(
+            f"Coded message: {vigenere_coder(message.lower(), keyword.lower())}")
+    elif menu == 3:
+        print(3)
+        break
+    else:
+        print("Wrong Input!")
