@@ -3,6 +3,16 @@ symbol = "~`!@#$%^&*()_-+=;:'\",.? "
 
 
 def vigenere(message, keyword):
+    """This is a function for decrypting a message
+
+    Args:
+        message (string): message that going to be decrypted
+        keyword (string): a keyword for decrypting the message
+
+    Returns:
+        string: decrypted message
+    """
+
     pointer = 0
     keyworded = ""
     decoded = ""
@@ -22,6 +32,16 @@ def vigenere(message, keyword):
 
 
 def vigenere_coder(message, keyword):
+    """This is a function for encrypting a message
+
+    Args:
+        message (string): message that going to be encrypted
+        keyword (string): a keyword for encrypting the message
+
+    Returns:
+        string: encrypted message
+    """
+
     pointer = 0
     keyworded = ""
     coded = ""
